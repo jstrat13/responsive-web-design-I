@@ -1,3 +1,376 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.container {
+  width: 800px;
+  /* TB LR */
+  margin: 0 auto;
+}
+@media (max-width: 800px){
+    .container {
+        width: 95%;
+        margin: 0px;
+    }
+}
+@media (max-width: 500px){
+    .container {
+        width: 100%;
+    }
+}
+
+/* header */
+header {
+	display: flex;
+}
+@media (max-width: 800px){
+    header {
+     flex-direction: column-reverse;
+     
+    }
+
+}
+
+header nav {
+  display: flex;
+  width: 500px;
+  margin-top: 35px;
+
+}
+@media (max-width: 800px){
+    header nav {
+        width: 589px;
+        margin: 40px auto;
+        display: flex;
+        
+      
+    }
+}
+@media (max-width: 500px){
+    header nav{
+        flex-direction: column;
+        justify-content: center;
+        width: 500px;
+    } 
+    header nav a:last-child{
+        border-bottom: 1px solid gray;
+    }
+}
+
+header nav a {
+  margin-right: 65px;
+  font-size: 14px;
+  color: gray;
+  text-decoration: none;
+}
+@media (max-width: 500px){
+    header nav a{
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+        font-size: 18px;
+        border-top: 1px solid gray;
+        padding: 20px 0px;
+        
+    }
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header nav a:first-child {
+  margin-left: 0;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+header .logo {
+display: flex;
+  margin-top: 20px;
+  margin-left: 190px;
+}
+@media (max-width: 800px){
+    header .logo {
+       margin: 0 auto;
+       margin-top: 20px;
+    }
+}
+/* cta */
+.cta {
+	display: flex;
+}
+.cta .cta-text {
+  vertical-align: top;
+  font-size: 77px;
+  margin-top: 120px;
+  text-align: center;
+  padding: 0px 75px;
+}
+@media(max-width: 800px){
+    .cta {
+        justify-content: space-around;
+    }
+    .cta .cta-text{
+        margin-top: 40px;
+    }
+}
+
+.cta .cta-text button {
+  background: white;
+  vertical-align: top;
+  margin-top: 6px;
+  padding: 8px 44px;
+  font-size: 17px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cta .cta-text button:hover {
+  background: black;
+  color: white;
+}
+
+.cta img {
+  
+  margin-top: 69px;
+}
+@media(max-width: 800px){
+    .cta img {
+        display: none;
+    }
+}
+
+.main-content {
+  border-top: 1px solid black;
+  margin-top: 76px;
+  padding-top: 39px;
+
+}
+
+.main-content .top-content {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+}
+@media(max-width: 800px){
+    .main-content .top-content {
+        padding: 0px 0px;
+        margin: 0 20px;
+
+    }
+    .main-content {
+        margin-top: 40px;
+    }
+}
+@media(max-width:500px){
+    .main-content .top-content {
+        flex-direction: column;
+        width: 500px;
+        margin: 0px 33.75px;
+    }
+}
+
+.main-content .top-content .text-content {
+  width: 44%;
+  display: flex;
+  flex-direction: column;
+    margin-right: 34px
+}
+@media (max-width:500px){
+    .main-content .top-content .text-content{
+        width: 423px;
+        margin: 0px;
+    }
+    .main-content .top-content .text-content:first-child{
+        margin-bottom: 40px;
+    }
+}
+
+.main-content .top-content .text-content:last-child {
+  margin-right: 0;
+}
+
+.main-content .middle-img {
+  margin-top: 45px;
+  width: 95%;
+}
+@media(max-width: 800px){
+    .main-content .middle-img{
+        margin: 40px 20px 0px 20px;
+    }
+}
+
+.main-content .bottom-content {
+  margin-top: 37px;
+  padding: 0 10px;
+  display: flex;
+}
+
+.main-content .bottom-content .text-content {
+  width: 29%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+}
+@media(max-width: 800px){
+    .main-content .bottom-content {
+        justify-content: space-around;
+    }
+}
+
+.main-content .bottom-content .text-content:last-child {
+  margin-right: 0;
+}
+@media (max-width: 500px){
+    .main-content .bottom-content{
+        flex-direction: column;
+        margin: 30px 33.750px;
+        padding: 0px;
+    
+    }
+    .main-content .bottom-content .text-content{
+        width: 423px;
+        margin-bottom: 60px;
+    }
+}
+.contact {
+  margin-top: 57px;
+  border-top: 1px solid black;
+  padding: 39px 10px 0;
+}
+@media(max-width:500px){
+    .contact{
+        margin-top: 0px;
+    }
+}
+
+.contact p {
+  margin: 20px 0;
+}
+
+footer {
+  margin: 32px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.services-header-img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.serviceHeader {
+  padding-bottom: 40px;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+
+.serviceHeader h2 {
+  font-size: 20px;
+
+}
+.infoTiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 45px;
+  border-bottom: 1.5px solid black;
+}
+.servicetile{
+  height: 260px;
+  width: 420px;
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.servicetile p {
+line-height: 1.3;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  
+}
+@media(max-width: 800px){
+    footer p {
+        margin: 0 auto;
+    }
+}
+
+.facts {
+  text-align: left;
+  width: 380px;
+}
+
+.facts p {
+  line-height: 1.3;
+  }
